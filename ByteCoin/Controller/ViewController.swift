@@ -9,13 +9,11 @@ class PriceViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     var coinManager = CoinManager()
     var selectedCurrency: String?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         currencyPicker.dataSource = self
         currencyPicker.delegate = self
         coinManager.delegate = self
-        
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -34,7 +32,6 @@ class PriceViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         let selectedCurrency = coinManager.currencyArray[row]
         coinManager.getCoinPrice(selectedCurrency)
         self.selectedCurrency = coinManager.currencyArray[row]
-        
     }
     
     func didFailWithError(error: Error) {

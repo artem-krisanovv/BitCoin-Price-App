@@ -14,7 +14,6 @@ struct CoinManager {
     
     func getCoinPrice(_ currency: String) {
         fetchCoinPrice(currency)
-        
     }
     
     func fetchCoinPrice(_ selectedCurrency: String) {
